@@ -24,17 +24,19 @@ if ($id>0){
 
 
 $seed=mysqli_real_escape_string($conn,    $_POST['seed']   );
-$sql2 = "select * from seed where id name='$status';";
-$result2=mysqli_query($conn,$sql);
+$sql2 = "select * from seed where  name='$seed';";
+$result2=mysqli_query($conn,$sql2);
 $rs2=mysqli_fetch_array($result2);
 $time=$rs2['time'];
 
-	if ($seed) {
+	if ($rs2) {
 	$sql = "update land set status='$seed',time='$time' where id=$id;";
 	mysqli_query($conn,$sql) or die("輸入錯誤"); //執行SQL
    
     
 	echo "成功種植!!!!";
+    $sql3 = "update seed set count=count-1 where name='$seed';";
+	mysqli_query($conn,$sql3) or die("輸入錯誤"); //執行SQL
     
     echo"<a href=farm.php>繼續</a>";
  } 
@@ -43,4 +45,3 @@ $time=$rs2['time'];
 ?>
 </body>
 </html>
-//
