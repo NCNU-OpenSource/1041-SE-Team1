@@ -46,3 +46,4 @@ if ($LV>$level && $playermoney>$cost) {
 ?>
 </body>
 </html>
+//解鎖土地
