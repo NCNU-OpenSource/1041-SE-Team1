@@ -17,3 +17,4 @@ mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
 
 
 ?>
+//與主機連線
