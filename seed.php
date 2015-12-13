@@ -64,3 +64,4 @@ while ($rs=mysqli_fetch_array($results)) {
 </form>
 </body>
 </html>
+//種植作物的表單
