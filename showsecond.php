@@ -22,6 +22,6 @@ else{
     $s=$time%60;//幾秒
     }
     echo"還剩下 $h 小時 $m 分鐘 $s 秒可採收";
-
+    header("refresh: 1;url=showsecond.php?id=$id" ); //自動重新整理:每秒
 ?>
 <input onclick="window.close();" value="關閉視窗" type="button">
