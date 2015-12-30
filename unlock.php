@@ -13,6 +13,7 @@
 require("conn.php");
 ?>
 <?php
+
 $nickname=$_SESSION['nk'];
 $id=(int)$_GET['id'];
 $sql = "select * from land where id=$id;";
@@ -20,30 +21,34 @@ $result=mysqli_query($conn,$sql);
 $rs=mysqli_fetch_array($result);
 $level=$rs['level'];
 $cost=$rs['money'];
-$sql2 = "select * from player where nickname=$nickname;";
-$result2=mysqli_query($conn,$sql);
-$rs2=mysqli_fetch_array($result);
+$sql2 = "select * from player where nickname='$nickname';";
+$result2=mysqli_query($conn,$sql2);
+$rs2=mysqli_fetch_array($result2);
 $LV=$rs2['LV'];
 $playermoney=$rs2['money'];
 
 
-if ($LV>$level && $playermoney>$cost) {
-    $sql3 = "update player set money=money-'$cost' where nickname='$nickname';";
+if ($LV>=$level && $playermoney>=$cost) {
+    $sql3 = "update player set money=money-$cost where nickname='$nickname';";
     mysqli_query($conn,$sql3) or die("MySQL query error3"); //執行SQL
-	$sql2 = "update land set status='空地' where id=$id;";
+	$sql4 = "update land set status='空地' where id=$id;";
     
-	mysqli_query($conn,$sql2) or die("MySQL query error2"); //執行SQL
+	mysqli_query($conn,$sql4) or die("MySQL query error4"); //執行SQL
+    echo"成功解鎖土地!!";
+    echo"</br>";
+    echo"扣除金錢 $cost 元";
     
-    header("Location:farm.php");
-    
+   
     
 	
     
 } else {
     echo "等級金錢不足!!!.";
-    header("Refresh: 3; url=farm.php");
-    }
+    
+  }
+  
 ?>
+<input onclick="window.close();" value="關閉視窗" type="button">
 </body>
+
 </html>
-//解鎖土地

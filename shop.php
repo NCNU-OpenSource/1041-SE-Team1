@@ -2,16 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>種植作物</title>
+<title>商店</title>
 </head>
 
 <body>
 
-<p>Do you want to grow !! </p>
+<p>購買種子 !! </p>
 <hr />
 <table width="200" border="1">
   <tr>
-     <td>  作物</td>
+     <td>作物</td>
     <td>時間</td>
     <td>售價</td>
     <td>獲利</td>
@@ -24,18 +24,18 @@ require("conn.php");
 
 
 <?php
-$id=(int)$_GET['id'];
 
-$sql = "select * from seed where count>0;";
+
+$sql = "select * from shop ;";
 $results=mysqli_query($conn,$sql);
 
 while ($rs=mysqli_fetch_array($results)) {
 
 ?>
 <table>
-  <tr><form method="post" action="grow.php">
+  <tr><form method="post" action="buy.php">
     <td><label>
-      <input type="hidden" name="id" value="<?php echo $id; ?>" >
+      <input type="hidden" name="id" value="<?php echo $rs['id']; ?>" >
      
     </label></td>
     <td><label>
@@ -46,10 +46,13 @@ while ($rs=mysqli_fetch_array($results)) {
      <?php echo $rs['sold']; ?>
    
     
-      <?php echo $rs['count']; ?>
+      
    </label></td> 
+    <td><label>
+    <input type="textbox" size=1 name="count"  />
+    </label></td>
    <td><label>
-    <input type="submit" name="Submit" value="種植!" />
+    <input type="submit" name="Submit" value="購買!" />
     </label></td>
      
     
@@ -57,10 +60,10 @@ while ($rs=mysqli_fetch_array($results)) {
 	
   </tr>
 </table>
-
+</form>
 <?php
 } 
 ?>
-</form>
+
 </body>
 </html>
