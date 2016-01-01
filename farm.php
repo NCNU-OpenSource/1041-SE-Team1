@@ -11,12 +11,12 @@
 position:relative;
 background-image: url(farm.jpg);
 width: 750px;
-height: 500px;
+height: 550px;
 left: 280px;
 top: 50px;
 opacity:0.9;
 }
-}
+
 #intro{
 color:brown;
 width:700px;
@@ -28,21 +28,29 @@ padding:20px;
 }
 #shop{
 position:absolute;
-right:490px;
-top:150px;
+right:550px;
+top:280px;
 }
 #land{
 position:absolute;
-left:300px;
-top:280px;
+left:245px;
+top:300px;
+}
+#player{
+position:absolute;
+left:20px;
+top:26px;
+}
+#farmer{
+position:absolute;
+left:550px;
+top:300px;
 }
 </style>
 <?php
 require("conn.php");
 ?>
 <?php
-
-
 $uid=$_SESSION['uID'];
 $sql2="select * from `player` where id ='$uid';";
 $results2=mysqli_query($conn,$sql2);
@@ -63,6 +71,7 @@ header("Location:playerlogin.php");
 ?>
 <div id="content">
 <div id="intro">
+<img  src="picture\player.png" />
 <p><?php  echo $_SESSION['nk'] ;?>LV:<?php  echo $LV;?>,體力值剩餘:<?php echo $power ;?>金錢剩餘:<?php echo $playermoney ;?>,經驗值:<?php echo $exp1 ;?>,升級還需經驗值:<?php echo $exp2 ;?></p>
 </div>
 
@@ -74,8 +83,6 @@ header("Location:playerlogin.php");
         $exp2+=400;
         $sqllevelup="update player set exp1=$exp1,exp2=$exp2,LV=LV+1 where nickname='$nickname';";
         mysqli_query($conn,$sqllevelup) or die("errorLevelup"); //執行SQL    
-    
-    
     }
     $count=0;
     $hour1=time();//使用者查看秒數
@@ -111,23 +118,20 @@ while($rs4=mysqli_fetch_array($results4)){
         $s=$time%60;//幾秒
     }
     if($status=="尚未解鎖"){
-        echo" <img src='lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=100,width=200')>" ;
+        echo" <img src='picture\lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=100,width=200')>" ;
         
     }
     else if($status=="空地"){
-        echo "<img src='land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')>";
+        echo "<img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')>";
     }
     else {
         
         if($status=="可採收"){
-           echo" <img src='treeland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')>" ;
+           echo" <img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')>" ;
         }
         else{
-            echo"<img src='growland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')>" ;
-            
-        
-             
-        
+            echo"<img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')>" ;
+
         }
         
         
@@ -147,8 +151,10 @@ while($rs4=mysqli_fetch_array($results4)){
 </table>
 
 <div id="shop">
-
-<img src="shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>
+<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>
+</div>
+<div id="farmer">
+<img  src="picture\farmer.png" />
 </div>
 </body>
 </html>
