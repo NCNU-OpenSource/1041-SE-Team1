@@ -30,6 +30,18 @@ width:90px;
 left:850px;
 top:225px;
 }
+#green_pepper{
+position:absolute;
+width:80px;
+left:400px;
+top:380px;
+}
+#grape{
+position:absolute;
+width:65px;
+left:560px;
+top:380px;
+}
 #close{
 position:absolute;
 width:60px;
@@ -52,6 +64,12 @@ require("conn.php");
 </div>
 <div>
 <img  id="tomato" src="picture\tomato.png" />
+</div>
+<div>
+<img  id="green_pepper" src="picture\green_pepper.png" />
+</div>
+<div>
+<img  id="grape" src="picture\grape.png" />
 </div>
 <?php
 $sql = "select * from shop ;";
