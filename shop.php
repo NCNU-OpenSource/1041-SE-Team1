@@ -6,25 +6,38 @@
 </head>
 
 <body>
+<style type="text/css">
+#shoplist{
+position:absolute;
+right:300px;
+top:100px;
+}
+#apple{
+position:absolute;
+width:100px;
+left:400px;
+top:230px;
+}
 
-<table width="200" border="1">
-  
+</style>
 <?php
 require("conn.php");
 ?>
 <div>
 <img  id="shoplist" src="picture\shoplist.png" />
 </div>
+<div>
+<img  id="apple" src="picture\apple.png" />
+</div>
 <?php
-
-
 $sql = "select * from shop ;";
 $results=mysqli_query($conn,$sql);
 
 while ($rs=mysqli_fetch_array($results)) {
-
 ?>
+
 <table>
+
   <tr><form method="post" action="buy.php">
     <td><label>
       <input type="hidden" name="id" value="<?php echo $rs['id']; ?>" >
@@ -46,16 +59,14 @@ while ($rs=mysqli_fetch_array($results)) {
    <td><label>
     <input type="submit" name="Submit" value="購買!" />
     </label></td>
-     
-    
-    
-	
-  </tr>
-</table>
+
+ </tr>
+
 </form>
 <?php
 } 
 ?>
 
 </body>
+<a href="farm.php">返回農場<a>
 </html>
