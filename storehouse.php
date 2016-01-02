@@ -57,6 +57,6 @@ while ($rs=mysqli_fetch_array($results)) {
 } 
 
 ?>
-
+<a href="farm.php">返回農場<a>
 </body>
 </html>
