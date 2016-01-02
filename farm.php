@@ -10,7 +10,7 @@
 #content{
 position:relative;
 background-image: url(farm.jpg);
-width: 750px;
+width: 770px;
 height: 550px;
 left: 280px;
 top: 50px;
@@ -18,17 +18,20 @@ opacity:0.9;
 }
 
 #intro{
-color:brown;
+position:relative;
+color:black;
+font-size:16px;
+font-weight:bold;
 width:700px;
 height:450px;
-left: 280px;
-top: 50px;
-text-align:center ;
+left:70px;
+top: 5px;
+text-align:left;
 padding:20px;
 }
 #shop{
 position:absolute;
-right:550px;
+right:580px;
 top:280px;
 }
 #land{
@@ -38,8 +41,9 @@ top:300px;
 }
 #player{
 position:absolute;
+width:55px;
 left:20px;
-top:26px;
+top:10px;
 }
 #farmer{
 position:absolute;
@@ -70,9 +74,12 @@ header("Location:playerlogin.php");
 }
 ?>
 <div id="content">
+<img  id="player" src="picture\player.png" />
 <div id="intro">
-<img  src="picture\player.png" />
-<p><?php  echo $_SESSION['nk'] ;?>LV:<?php  echo $LV;?>,體力值剩餘:<?php echo $power ;?>金錢剩餘:<?php echo $playermoney ;?>,經驗值:<?php echo $exp1 ;?>,升級還需經驗值:<?php echo $exp2 ;?></p>
+<?php  echo $_SESSION['nk'] ;?> LV:<?php  echo $LV;?> Money:<?php echo $playermoney ;?></br>
+Energy:<?php echo $power ;?> </br>
+Exp:<?php echo $exp1 ;?></br>
+<!--升級還需經驗值:<?php echo $exp2 ;?></br>-->
 </div>
 
 
