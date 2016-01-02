@@ -18,10 +18,22 @@ width:100px;
 left:400px;
 top:230px;
 }
-#returnfarm{
+#rice{
 position:absolute;
-width:150px;
-right:350px;
+width:100px;
+left:700px;
+top:220px;
+}
+#tomato{
+position:absolute;
+width:90px;
+left:850px;
+top:225px;
+}
+#close{
+position:absolute;
+width:60px;
+right:360px;
 top:115px;	
 }
 
@@ -34,6 +46,12 @@ require("conn.php");
 </div>
 <div>
 <img  id="apple" src="picture\apple.png" />
+</div>
+<div>
+<img  id="rice" src="picture\rice.png" />
+</div>
+<div>
+<img  id="tomato" src="picture\tomato.png" />
 </div>
 <?php
 $sql = "select * from shop ;";
@@ -74,5 +92,5 @@ while ($rs=mysqli_fetch_array($results)) {
 ?>
 
 </body>
-<a href="farm.php"><img id="returnfarm" src="picture\returnfarm.png"><a>
+<a href="farm.php"><img id="close" src="picture\close.png"><a>
 </html>
