@@ -18,6 +18,12 @@ width:100px;
 left:400px;
 top:230px;
 }
+#returnfarm{
+position:absolute;
+width:150px;
+right:350px;
+top:115px;	
+}
 
 </style>
 <?php
@@ -68,5 +74,5 @@ while ($rs=mysqli_fetch_array($results)) {
 ?>
 
 </body>
-<a href="farm.php">返回農場<a>
+<a href="farm.php"><img id="returnfarm" src="picture\returnfarm.png"><a>
 </html>
