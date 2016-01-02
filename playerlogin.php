@@ -54,7 +54,7 @@ bottom: 150px;
 <div id="content">
 <div id="woodboard">
 </div>
-<div id="log">6
+<div id="log">
 
 <h1 style="color:red ; text-align:center"><font size=6> Login</font></h1>
 <br/>
