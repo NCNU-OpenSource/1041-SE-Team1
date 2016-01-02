@@ -12,6 +12,12 @@ position:absolute;
 right:300px;
 top:100px;
 }
+#buy{
+position:absolute;
+width:60px;
+left:420px;
+top:325px;
+}
 #apple{
 position:absolute;
 width:100px;
@@ -57,19 +63,11 @@ require("conn.php");
 <img  id="shoplist" src="picture\shoplist.png" />
 </div>
 <div>
-<img  id="apple" src="picture\apple.png" />
-</div>
-<div>
-<img  id="rice" src="picture\rice.png" />
-</div>
-<div>
-<img  id="tomato" src="picture\tomato.png" />
-</div>
-<div>
-<img  id="green_pepper" src="picture\green_pepper.png" />
-</div>
-<div>
-<img  id="grape" src="picture\grape.png" />
+<a href><img  id="apple" src="picture\apple.png" /><img id="buy" src="picture\buy.png" /></a>
+<a href><img  id="rice" src="picture\rice.png" /></a>
+<a href><img  id="tomato" src="picture\tomato.png" /></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
+<a href><img  id="grape" src="picture\grape.png" /></a>
 </div>
 <?php
 $sql = "select * from shop ;";
