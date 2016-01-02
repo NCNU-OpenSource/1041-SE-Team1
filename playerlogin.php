@@ -1,3 +1,4 @@
+
 <?php
 require("conn.php");
 ?>
@@ -29,7 +30,7 @@ else
 				header("Location:farm.php");
 				exit(0);
 			} else {
-				//echo "請先登入以使用 <br />";
+				echo "請先登入以使用 <br />";
 			}
 		}
 
@@ -62,7 +63,7 @@ bottom: 150px;
 <font size=4>UserName:</font><input type="text" name="id" value=dcw><br/>
 <br/>
 
-<font size=4>Password:</font><input type="password" name="pwd" value=12345><br/>
+<font size=4>Password :  </font><input type="password" name="pwd" value=12345><br/>
 <br/>
 <h1 style="text-align:center"><input type="submit" value="登入"></h1>
 </form>

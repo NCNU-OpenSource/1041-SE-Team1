@@ -18,15 +18,21 @@ require("conn.php");
 $nickname=$_SESSION['nk'];
 $id=(int)$_POST["id"];
 
+
 $count=$_POST['count'];
 
 
 
 if ($id>0){
    
-
+if($count==0){
+    header("Location:shop.php");
+}
 
 $seed=mysqli_real_escape_string($conn,    $_POST['seed']   );
+if($seed==""){
+    header("Location:shop.php");
+}
 
 $sql2 = "select * from seed where  name='$seed';";
 
@@ -53,6 +59,7 @@ $sql2 = "select * from seed where  name='$seed';";
             mysqli_query($conn,$sql4) or die("error4");
 	        echo "成功購買!!!!";
             echo " $name x $count";
+            echo "總共是 $cost 元";
             echo"<a href=shop.php>回商店</a>";
             }
             else{
@@ -85,6 +92,7 @@ $sql2 = "select * from seed where  name='$seed';";
             mysqli_query($conn,$sql5) or die("error5");
 	        echo "成功購買!!!!";
             echo " $name x $count";
+            echo "總共是 $cost 元";
             echo"<a href=shop.php>回商店</a>";
             }
             else{
@@ -105,6 +113,7 @@ $sql2 = "select * from seed where  name='$seed';";
     
     
  } 
+
 ?>
 </body>
 </html>

@@ -16,7 +16,6 @@ left: 280px;
 top: 50px;
 opacity:0.9;
 }
-
 #intro{
 position:relative;
 color:black;
@@ -32,12 +31,12 @@ padding:20px;
 #shop{
 position:absolute;
 right:580px;
-top:280px;
+top:300px;
 }
 #land{
 position:absolute;
 left:245px;
-top:300px;
+top:330px;
 }
 #player{
 position:absolute;
@@ -48,7 +47,7 @@ top:10px;
 #farmer{
 position:absolute;
 left:300px;
-top:120px;
+top:150px;
 }
 #storehouse{
 position:absolute;
@@ -70,10 +69,12 @@ $LV=$rs2['LV'];
 $playermoney=$rs2['money'];
 $exp1=$rs2['exp1'];
 $exp2=$rs2['exp2'];
+$totalexp=$rs2['totalexp'];;
 $sql3="select * from `land` where id ='$uid';";
 $results3=mysqli_query($conn,$sql3);
 $rs3=mysqli_fetch_array($results3);
 $nickname=$_SESSION['nk'];
+
 if($_SESSION['nk']==""){
 header("Location:playerlogin.php");
 }
@@ -83,19 +84,29 @@ header("Location:playerlogin.php");
 <div id="intro">
 <?php  echo $_SESSION['nk'] ;?> LV:<?php  echo $LV;?> Money:<?php echo $playermoney ;?></br>
 Energy:<?php echo $power ;?> </br>
-Exp:<?php echo $exp1 ;?></br>
+Exp:<?php echo $exp1 ;?>/<?php echo $exp2 ;?></br>
+Totalexp:<?php echo $totalexp ;?>
 <!--升級還需經驗值:<?php echo $exp2 ;?></br>-->
 </div>
-
 
 <div id="land">
 <?php
     if($exp1>=$exp2){
+        
+        $totalexp+=$exp2;
         $exp1=$exp1-$exp2;
-        $exp2+=400;
-        $sqllevelup="update player set exp1=$exp1,exp2=$exp2,LV=LV+1 where nickname='$nickname';";
+        $exp2+=200;
+        
+        $sqllevelup="update player set exp1=$exp1,exp2=$exp2,LV=LV+1,totalexp=$totalexp where nickname='$nickname';";
         mysqli_query($conn,$sqllevelup) or die("errorLevelup"); //執行SQL    
+        ?>
+        <script type="text/javascript">
+            window.alert("升級囉!!!");
+            
+        </script>
+        <?php
     }
+    $totalexp=$totalexp+$exp1;
     $count=0;
     $hour1=time();//使用者查看秒數
     $sql4="select * from `land` ;";
@@ -143,7 +154,6 @@ while($rs4=mysqli_fetch_array($results4)){
         }
         else{
             echo"<img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')>" ;
-
         }
         
         
@@ -152,12 +162,10 @@ while($rs4=mysqli_fetch_array($results4)){
     
     
 }
-
     
     
  
     
-
 ?>
 </div>
 </table>
@@ -169,27 +177,20 @@ while($rs4=mysqli_fetch_array($results4)){
 <img  src="picture\farmer.png" />
 </div>
 <div id="storehouse">
-<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','shop.php',config='height=300,width=500')>
-</div>
-<div id="item">
-
-<img src="item.png" alt="物品欄" title="物品欄">
+<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>
+<br/>
 <?php
-echo"</br>";
-$itemsql="select * from seed where count>0;";//show出物品清單
-$itemresult=mysqli_query($conn,$itemsql);
-while($itemrs=mysqli_fetch_array($itemresult)){
-    echo $itemrs['name'];
+//show出物品清單
+$sqlitem="select * from seed where count>0;";
+$resultitem=mysqli_query($conn,$sqlitem);
+$rsitem=mysqli_fetch_array($resultitem);
+while($rsitem=mysqli_fetch_array($resultitem)){
+    echo $rsitem['name'];
     echo"x";
-    echo $itemrs['count'];
-  
-
+    echo $rsitem['count'];
 
 }
-
-
 ?>
-
 </div>
 </body>
 </html>

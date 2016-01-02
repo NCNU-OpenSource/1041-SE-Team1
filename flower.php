@@ -9,15 +9,7 @@
 
 <p>採收 !! </p>
 <hr />
-<table width="200" border="1">
-  <tr>
-     <td>作物</td>
-    <td>時間</td>
-    <td>花費</td>
-    <td>售價</td>
-     <td>數量</td>
-    
-  </tr>
+
 <?php
 require("conn.php");
 ?>

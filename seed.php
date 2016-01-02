@@ -24,6 +24,9 @@ require("conn.php");
 
 
 <?php
+
+    
+
 $id=(int)$_GET['id'];
 
 $sql = "select * from seed where count>0;";

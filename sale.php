@@ -22,6 +22,8 @@ $nickname=$_SESSION['nk'];
 $count=$_POST['count'];
 
 
+
+
    
 if($count==0){
     header("Location:storehouse.php");

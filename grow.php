@@ -49,7 +49,7 @@ $exp=$rs2['exp'];
 	mysqli_query($conn,$sql3) or die("輸入錯誤2"); //執行SQL
     
     
-    echo"<a href=farm.php>繼續</a>";
+    
  } 
  
  } 
