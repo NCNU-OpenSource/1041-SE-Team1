@@ -162,10 +162,7 @@ while($rs4=mysqli_fetch_array($results4)){
     
     
 }
-    
-    
- 
-    
+
 ?>
 </div>
 </table>
@@ -192,7 +189,6 @@ while($rsitem=mysqli_fetch_array($resultitem)){
     echo $rsitem['count'];
 
 }
-
 ?>
 </div>
 </div>
