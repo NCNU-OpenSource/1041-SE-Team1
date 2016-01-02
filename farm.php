@@ -183,7 +183,7 @@ while($rs4=mysqli_fetch_array($results4)){
 //show出物品清單
 $sqlitem="select * from seed where count>0;";
 $resultitem=mysqli_query($conn,$sqlitem);
-$rsitem=mysqli_fetch_array($resultitem);
+
 while($rsitem=mysqli_fetch_array($resultitem)){
     echo $rsitem['name'];
     echo"x";
