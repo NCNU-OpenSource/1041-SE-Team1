@@ -169,18 +169,19 @@ while($rs4=mysqli_fetch_array($results4)){
 ?>
 </div>
 </table>
-
-<div id="shop">
-<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>
-</div>
+<a href="shop.php"><img id="shop" src="picture\shop.png"></a>
+<!--<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>-->
 <div id="farmer">
 <img  src="picture\farmer.png" />
 </div>
-<div id="storehouse">
-<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>
+
+<a href="storehouse.php"><img id="storehouse" src="picture\storehouse.png"></a>
+<!--<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>-->
 <br/>
+<div id="storehouse">
 <?php
 //show出物品清單
+
 $sqlitem="select * from seed where count>0;";
 $resultitem=mysqli_query($conn,$sqlitem);
 $rsitem=mysqli_fetch_array($resultitem);
@@ -190,7 +191,9 @@ while($rsitem=mysqli_fetch_array($resultitem)){
     echo $rsitem['count'];
 
 }
+
 ?>
+</div>
 </div>
 </body>
 </html>
