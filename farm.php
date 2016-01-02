@@ -141,19 +141,19 @@ while($rs4=mysqli_fetch_array($results4)){
         $s=$time%60;//幾秒
     }
     if($status=="尚未解鎖"){
-        echo" <img src='picture\lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=100,width=200')>" ;
+        echo" <a href><img src='picture\lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=100,width=200')></a>" ;
         
     }
     else if($status=="空地"){
-        echo "<img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')>";
+        echo "<a href><img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')></a>";
     }
     else {
         
         if($status=="可採收"){
-           echo" <img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')>" ;
+           echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')></a>" ;
         }
         else{
-            echo"<img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')>" ;
+            echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')></a>" ;
         }
         
         
@@ -171,13 +171,13 @@ while($rs4=mysqli_fetch_array($results4)){
 </table>
 
 <div id="shop">
-<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>
+<a href><img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')></a>
 </div>
 <div id="farmer">
 <img  src="picture\farmer.png" />
 </div>
 <div id="storehouse">
-<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>
+<a href><img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')></a>
 <br/>
 <?php
 //show出物品清單
