@@ -8,9 +8,8 @@
 <body>
 <style type="text/css">
 #shoplist{
-position:absolute;
-right:300px;
-top:100px;
+position:relative;
+
 }
 #buy{
 position:absolute;
@@ -21,66 +20,68 @@ top:325px;
 #apple{
 position:absolute;
 width:100px;
-left:400px;
-top:230px;
+left:100px;
+top:180px;
 }
 #rice{
 position:absolute;
 width:100px;
-left:700px;
-top:220px;
+left:300px;
+top:170px;
 }
 #tomato{
 position:absolute;
 width:90px;
-left:850px;
-top:225px;
+left:500px;
+top:180px;
 }
 #green_pepper{
 position:absolute;
 width:80px;
-left:400px;
-top:380px;
+left:100px;
+top:340px;
 }
 #grape{
 position:absolute;
 width:65px;
-left:560px;
-top:380px;
-}
-#close{
-position:absolute;
-width:60px;
-right:360px;
-top:115px;	
+left:300px;
+top:340px;
 }
 
+#close{
+position:absolute;
+width:50px;
+left:650px;
+top:115px;	
+}
 </style>
 <?php
 require("conn.php");
 ?>
 <div>
 <img  id="shoplist" src="picture\shoplist.png" />
-</div>
+
 <div>
-<a href><img  id="apple" src="picture\apple.png" /><img id="buy" src="picture\buy.png" /></a>
+<img  id="apple" src="picture\apple.png" />
 <a href><img  id="rice" src="picture\rice.png" /></a>
 <a href><img  id="tomato" src="picture\tomato.png" /></a>
 <a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
 <a href><img  id="grape" src="picture\grape.png" /></a>
 </div>
+</div>
 <?php
 $sql = "select * from shop ;";
 $results=mysqli_query($conn,$sql);
-
+$num=0;
 while ($rs=mysqli_fetch_array($results)) {
+$num++;
 ?>
 
 <table>
-
+  <td><label>
   <tr><form method="post" action="buy.php">
-    <td><label>
-      <input type="hidden" name="id" value="<?php echo $rs['id']; ?>" >
+   
+      <input type="hidden" name="id"  value="<?php echo $rs['id']; ?>" >
      
     </label></td>
     <td><label>
