@@ -6,14 +6,26 @@
 </head>
 
 <body>
-
-<p>我的倉庫 !! </p>
-<hr />
-
+<style type="text/css">
+#storehouselist{
+position:relative;
+left:300px;
+top:100px;
+}
+#close{
+position:absolute;
+width:50px;
+left:950px;
+top:125px;	
+}
+</style>
 <?php
 require("conn.php");
 ?>
+<div>
+<img  id="storehouselist" src="picture\storehouselist.png" />
 
+<div>
 
 <?php
 
@@ -49,7 +61,7 @@ while ($rs=mysqli_fetch_array($results)) {
     
     
 	
-  </tr>
+</tr>
 </table>
 </form>
 <?php
@@ -57,6 +69,6 @@ while ($rs=mysqli_fetch_array($results)) {
 } 
 
 ?>
-<a href="farm.php">返回農場<a>
+<a href="farm.php"><img id="close" src="picture\close.png"><a>
 </body>
 </html>

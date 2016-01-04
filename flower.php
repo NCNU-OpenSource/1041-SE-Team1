@@ -53,6 +53,9 @@ if ($name==$name2) {//如果已有這項作物
     echo"獲得經驗值: $exp !!";
 }
 ?>
+<script type="text/javascript">
+self.opener.location.reload(); //重新整理farm.php頁面
+</script>
 </form>
 </body>
 </html>
