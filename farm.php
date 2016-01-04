@@ -24,7 +24,7 @@ font-weight:bold;
 width:700px;
 height:450px;
 left:70px;
-top: 5px;
+top: 0px;
 text-align:left;
 padding:20px;
 }
@@ -42,7 +42,7 @@ top:330px;
 position:absolute;
 width:55px;
 left:20px;
-top:10px;
+top:5px;
 }
 #farmer{
 position:absolute;
@@ -154,6 +154,8 @@ while($rs4=mysqli_fetch_array($results4)){
         }
         else{
             echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')></a>" ;
+			//echo"<a href><img src='picture\seedland.png' / onclick=window.alert('剩餘時間',id=$count)></a>" ;
+			  //echo"<a href='showsecond.php'><img src='picture\seedland.png')></a>" ;
         }
         
         
@@ -162,7 +164,10 @@ while($rs4=mysqli_fetch_array($results4)){
     
     
 }
-
+    
+    
+ 
+    
 ?>
 </div>
 </table>
@@ -177,19 +182,7 @@ while($rs4=mysqli_fetch_array($results4)){
 <!--<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>-->
 <br/>
 <div id="storehouse">
-<?php
-//show出物品清單
 
-$sqlitem="select * from seed where count>0;";
-$resultitem=mysqli_query($conn,$sqlitem);
-
-while($rsitem=mysqli_fetch_array($resultitem)){
-    echo $rsitem['name'];
-    echo"x";
-    echo $rsitem['count'];
-
-}
-?>
 </div>
 </div>
 </body>
