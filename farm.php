@@ -167,7 +167,7 @@ while($rs4=mysqli_fetch_array($results4)){
 </div>
 </table>
 
-<a href="shop.php"><img id="shop" src="picture\shop.png"></a>
+<a href="store.html"><img id="shop" src="picture\shop.png"></a>
 <!--<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>-->
 <div id="farmer">
 <img  src="picture\farmer.png" />
