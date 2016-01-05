@@ -55,6 +55,11 @@ $sql2 = "select * from flower where  name='$seed';";
 	        echo "成功出售!!!!";
             echo " $name x $count ";
             echo "總共獲得 $earn 元";
+            ?>
+            <script type="text/javascript">
+                self.opener.location.reload(); //重新整理farm.php頁面                             
+            </script>
+            <?php
             echo"<a href=storehouse.php>回倉庫</a>";
             
            

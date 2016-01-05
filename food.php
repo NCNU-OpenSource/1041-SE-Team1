@@ -29,7 +29,7 @@ width:60px;
 left:420px;
 top:325px;
 }
-#apple{
+#cake{
 position:absolute;
 width:100px;
 left:100px;
@@ -41,22 +41,16 @@ width:100px;
 left:300px;
 top:170px;
 }
-#tomato{
+#hot{
 position:absolute;
 width:90px;
 left:500px;
 top:180px;
 }
-#green_pepper{
+#hambuger{
 position:absolute;
 width:80px;
 left:100px;
-top:340px;
-}
-#grape{
-position:absolute;
-width:65px;
-left:300px;
 top:340px;
 }
 
@@ -72,17 +66,21 @@ require("conn.php");
 ?>
 <div>
 <img  id="shoplist" src="picture\shoplist.png" />
-<img  id="seed_botton" src="picture\seed_botton.png" />
-<a href=food.php><img  id="food_botton" src="picture\food_botton.png" /></a>
+<a href=shop.php><img  id="seed_botton" src="picture\seed_botton.png" /></a>
+<img  id="food_botton" src="picture\food_botton.png" />
 <div>
-<img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=100px,width=200px;')>
-<a href><img  id="rice" src="picture\rice.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('itemlist.php?id=4','itemlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('itemlist.php?id=5','itemlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="grape" src="picture\grape.png" / onclick=window.open('itemlist.php?id=6','itemlist.php',config='height=100px,width=200px;')></a>
+<img  id="cake" src="picture\cake.jpg" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')>
+<a href><img  id="rice" src="picture\rice.jpg" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="hot" src="picture\hot.jpeg" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=100px,width=300px;')></a>
+<a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=100px,width=300px;')></a>
+
 </div>
 </div>
 
+<?php
+
+
+?>
 </body>
 <a href="farm.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>
 </html>

@@ -17,7 +17,7 @@ width:60px;
 left:420px;
 top:325px;
 }
-#cake{
+#apple{
 position:absolute;
 width:100px;
 left:100px;
@@ -29,19 +29,24 @@ width:100px;
 left:300px;
 top:170px;
 }
-#hot{
+#tomato{
 position:absolute;
 width:90px;
 left:500px;
 top:180px;
 }
-#hambuger{
+#green_pepper{
 position:absolute;
 width:80px;
 left:100px;
 top:340px;
 }
-
+#grape{
+position:absolute;
+width:65px;
+left:300px;
+top:340px;
+}
 #close{
 position:absolute;
 width:50px;
@@ -52,36 +57,44 @@ top:115px;
 <?php
 require("conn.php");
 ?>
-
+<div>
+<img  id="shoplist" src="picture\shoplist.png" />
+</div>
+<div>
+<img  id="apple" src="picture\apple.png" /><a href=shop.php?id=1><img id="buy" src="picture\buy.png" /></a>
+<a href><img  id="rice" src="picture\rice.png" /></a>
+<a href><img  id="tomato" src="picture\tomato.png" /></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
+<a href><img  id="grape" src="picture\grape.png" /></a>
+</div>
 <?php
-$id=(int)$_GET['id'];
-$sql = "select * from food where id=$id;";
+$sql = "select * from shop ;";
 $results=mysqli_query($conn,$sql);
-
 while ($rs=mysqli_fetch_array($results)) {
-
 ?>
 
 <table>
-  <td><label>
-  <tr><form method="post" action="eat.php">
-   
-      <input type="hidden" name="id"  value="<?php echo $rs['id']; ?>" >
+
+  <tr><form method="post" action="buy.php">
+    <td><label>
+      <input type="hidden" name="id" value="<?php echo $rs['id']; ?>" >
      
     </label></td>
     <td><label>
-      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?>
-    費用:<?php echo $rs['price'];?>
+      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?><?php echo $rs['time']; ?>小時
+    <?php echo $rs['money'];?>
    
    
-     回復體力:<?php echo $rs['power']; ?>
+     <?php echo $rs['sold']; ?>
    
     
       
    </label></td> 
-    
+    <td><label>
+    <input type="textbox" size=1 name="count"  />
+    </label></td>
    <td><label>
-    <input type="submit" name="Submit" value="吃!" />
+    <input type="submit" name="Submit" value="購買!" />
     </label></td>
 
  </tr>

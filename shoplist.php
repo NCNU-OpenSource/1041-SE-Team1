@@ -11,13 +11,25 @@
 position:relative;
 
 }
+#seed_botton{
+position:absolute;
+width:60px;
+left:420px;
+top:325px;
+}
+#food_botton{
+position:absolute;
+width:60px;
+left:420px;
+top:325px;
+}
 #buy{
 position:absolute;
 width:60px;
 left:420px;
 top:325px;
 }
-#cake{
+#apple{
 position:absolute;
 width:100px;
 left:100px;
@@ -29,19 +41,24 @@ width:100px;
 left:300px;
 top:170px;
 }
-#hot{
+#tomato{
 position:absolute;
 width:90px;
 left:500px;
 top:180px;
 }
-#hambuger{
+#green_pepper{
 position:absolute;
 width:80px;
 left:100px;
 top:340px;
 }
-
+#grape{
+position:absolute;
+width:65px;
+left:300px;
+top:340px;
+}
 #close{
 position:absolute;
 width:50px;
@@ -52,43 +69,22 @@ top:115px;
 <?php
 require("conn.php");
 ?>
+<div><img  id="seed_botton" src="picture\seed_botton.png" />
+<img  id="food_botton" src="picture\food_botton.png" />
+<img  id="shoplist" src="picture\shoplist.png" />
 
+
+<div>
+<a href ><img  id="apple" src="picture\apple.png" /onclick=window.open('testshop.php?id=apple','testshop.php',config='height=200,width=300')></a>
+<a href><img  id="rice" src="picture\rice.png" /></a>
+<a href><img  id="tomato" src="picture\tomato.png" /></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
+<a href><img  id="grape" src="picture\grape.png" /></a>
+</div>
+</div>
 <?php
-$id=(int)$_GET['id'];
-$sql = "select * from food where id=$id;";
-$results=mysqli_query($conn,$sql);
 
-while ($rs=mysqli_fetch_array($results)) {
 
-?>
-
-<table>
-  <td><label>
-  <tr><form method="post" action="eat.php">
-   
-      <input type="hidden" name="id"  value="<?php echo $rs['id']; ?>" >
-     
-    </label></td>
-    <td><label>
-      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?>
-    費用:<?php echo $rs['price'];?>
-   
-   
-     回復體力:<?php echo $rs['power']; ?>
-   
-    
-      
-   </label></td> 
-    
-   <td><label>
-    <input type="submit" name="Submit" value="吃!" />
-    </label></td>
-
- </tr>
-
-</form>
-<?php
-} 
 ?>
 
 </body>

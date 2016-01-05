@@ -1,6 +1,7 @@
 <?php
 require("conn.php");
 ?>
+
 <?php
 $id=(int)$_GET['id'];
 $hour1=time();//使用者查看秒數
@@ -25,4 +26,5 @@ else{
     echo" $status 還剩下 $h 小時 $m 分鐘 $s 秒可採收";
 header("refresh: 1;url=showsecond.php?id=$id" ); 
 ?>
+
 <input onclick="window.close();" value="關閉視窗" type="button">

@@ -42,7 +42,10 @@ $result2 = mysqli_query($conn,$sql2);
 	
         
         if ($rs2=mysqli_fetch_array($result2)){//如果已有這項作物
-            $name=$rs2['name'];               
+            $name=$rs2['name'];
+            
+           
+           
             $price=$rs2['price'];
             $power=$rs2['power'];//食物能恢復的體力
             $sqlmoney="select *from player where nickname='$nickname';";

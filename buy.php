@@ -60,6 +60,11 @@ $sql2 = "select * from seed where  name='$seed';";
 	        echo "成功購買!!!!";
             echo " $name x $count";
             echo "總共是 $cost 元";
+            ?>
+            <script type="text/javascript">
+                self.opener.location.reload(); //重新整理farm.php頁面
+            </script>
+            <?php
             echo"<a href=shop.php>回商店</a>";
             }
             else{
@@ -92,7 +97,12 @@ $sql2 = "select * from seed where  name='$seed';";
             mysqli_query($conn,$sql5) or die("error5");
 	        echo "成功購買!!!!";
             echo " $name x $count";
-            echo "總共是 $cost 元";
+            echo "總共是 $cost 元";           
+            ?>
+            <script type="text/javascript">
+                self.opener.location.reload(); //重新整理farm.php頁面
+            </script>
+            <?php
             echo"<a href=shop.php>回商店</a>";
             }
             else{

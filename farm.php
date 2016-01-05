@@ -4,7 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>我的農場</title>
 </head>
-
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://jqueryui.com/resources/demos/external/jquery.bgiframe-2.1.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <body>
 <style type="text/css">
 #content{
@@ -24,7 +27,7 @@ font-weight:bold;
 width:700px;
 height:450px;
 left:70px;
-top: 0px;
+top: 5px;
 text-align:left;
 padding:20px;
 }
@@ -36,13 +39,13 @@ top:300px;
 #land{
 position:absolute;
 left:245px;
-top:330px;
+top:300px;
 }
 #player{
 position:absolute;
 width:55px;
 left:20px;
-top:5px;
+top:10px;
 }
 #farmer{
 position:absolute;
@@ -79,8 +82,27 @@ if($_SESSION['nk']==""){
 header("Location:playerlogin.php");
 }
 ?>
+<?php 
+if($exp1>=$exp2){
+        
+        $totalexp+=$exp2;
+        $exp1=$exp1-$exp2;
+        $exp2+=200;
+        
+        $sqllevelup="update player set exp1=$exp1,exp2=$exp2,LV=LV+1,totalexp=$totalexp,power=100 where nickname='$nickname';";
+        mysqli_query($conn,$sqllevelup) or die("errorLevelup"); //執行SQL    
+        ?>
+        <script type="text/javascript">
+            
+            window.alert("升級囉!!!");
+            self.location.reload();
+        </script>
+        <?php
+    }
+    $totalexp=$totalexp+$exp1;
+?>
 <div id="content">
-<img  id="player" src="picture\player.png" />
+<img  id="player" src="育銘.jpg" />
 <div id="intro">
 <?php  echo $_SESSION['nk'] ;?> LV:<?php  echo $LV;?> Money:<?php echo $playermoney ;?></br>
 Energy:<?php echo $power ;?> </br>
@@ -91,31 +113,16 @@ Totalexp:<?php echo $totalexp ;?>
 
 <div id="land">
 <?php
-    if($exp1>=$exp2){
-        
-        $totalexp+=$exp2;
-        $exp1=$exp1-$exp2;
-        $exp2+=200;
-        
-        $sqllevelup="update player set exp1=$exp1,exp2=$exp2,LV=LV+1,totalexp=$totalexp where nickname='$nickname';";
-        mysqli_query($conn,$sqllevelup) or die("errorLevelup"); //執行SQL    
-        ?>
-        <script type="text/javascript">
-            window.alert("升級囉!!!");
-            
-        </script>
-        <?php
-    }
-    $totalexp=$totalexp+$exp1;
+    
     $count=0;
     $hour1=time();//使用者查看秒數
     $sql4="select * from `land` ;";
     $results4=mysqli_query($conn,$sql4);
-while($rs4=mysqli_fetch_array($results4)){
+    while($rs4=mysqli_fetch_array($results4)){
     
    
     $count++;
-    if($count%4==0){
+    if($count%3==1){
         echo"</br>";
     }
     $status=$rs4['status'];
@@ -146,16 +153,16 @@ while($rs4=mysqli_fetch_array($results4)){
     }
     else if($status=="空地"){
         echo "<a href><img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')></a>";
+       
     }
     else {
         
         if($status=="可採收"){
+           
            echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')></a>" ;
         }
         else{
             echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')></a>" ;
-			//echo"<a href><img src='picture\seedland.png' / onclick=window.alert('剩餘時間',id=$count)></a>" ;
-			  //echo"<a href='showsecond.php'><img src='picture\seedland.png')></a>" ;
         }
         
         
@@ -172,18 +179,21 @@ while($rs4=mysqli_fetch_array($results4)){
 </div>
 </table>
 
-<a href="store.html"><img id="shop" src="picture\shop.png"></a>
-<!--<img src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('shop.php','shop.php',config='height=300,width=500')>-->
+
+
+
+
+<div id="shop">
+<a href><img  src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('door.php','door.php',"height=480,width=770")></a>
+</div>
+
 <div id="farmer">
 <img  src="picture\farmer.png" />
 </div>
-
-<a href="storehouse.php"><img id="storehouse" src="picture\storehouse.png"></a>
-<!--<img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=300,width=500')>-->
-<br/>
 <div id="storehouse">
+<a href><img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=480,width=770,location=0,status=0')></a>
+<br/>
 
-</div>
 </div>
 </body>
 </html>

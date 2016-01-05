@@ -39,7 +39,7 @@ if ($name==$name2) {//如果已有這項作物
     $sqlx5="update land set status='空地',seed='',time=0,exp=0,ftime=0 where id='$id';";
     mysqli_query($conn,$sqlx5) or die("errorx5"); //執行SQL
     echo"$name 收取成功!!";
-    
+    echo"獲得經驗值: $exp !!";
     }
     else{
     
@@ -53,9 +53,6 @@ if ($name==$name2) {//如果已有這項作物
     echo"獲得經驗值: $exp !!";
 }
 ?>
-<script type="text/javascript">
-self.opener.location.reload(); //重新整理farm.php頁面
-</script>
 </form>
 </body>
 </html>
