@@ -12,6 +12,36 @@ position:relative;
 left:300px;
 top:100px;
 }
+#apple{
+position:absolute;
+width:100px;
+left:400px;
+top:230px;
+}
+#rice{
+position:absolute;
+width:100px;
+left:700px;
+top:230px;
+}
+#tomato{
+position:absolute;
+width:90px;
+left:850px;
+top:240px;
+}
+#green_pepper{
+position:absolute;
+width:80px;
+left:400px;
+top:380px;
+}
+#grape{
+position:absolute;
+width:65px;
+left:570px;
+top:380px;
+}
 #close{
 position:absolute;
 width:50px;
@@ -24,8 +54,14 @@ require("conn.php");
 ?>
 <div>
 <img  id="storehouselist" src="picture\storehouselist.png" />
-
 <div>
+<img  id="apple" src="picture\apple.png" />
+<a href><img  id="rice" src="picture\rice.png" /></a>
+<a href><img  id="tomato" src="picture\tomato.png" /></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
+<a href><img  id="grape" src="picture\grape.png" /></a>
+</div>
+</div>
 
 <?php
 
