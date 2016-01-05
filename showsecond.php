@@ -1,7 +1,9 @@
 <?php
 require("conn.php");
 ?>
-
+<div>
+<img  id="counter" src="picture\counter.jpg" />
+</div>
 <?php
 $id=(int)$_GET['id'];
 $hour1=time();//使用者查看秒數

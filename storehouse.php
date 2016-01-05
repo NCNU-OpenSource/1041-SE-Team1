@@ -55,7 +55,7 @@ top:340px;
 position:absolute;
 width:50px;
 left:650px;
-top:25px;	
+top:35px;	
 }
 </style>
 <?php

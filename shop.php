@@ -15,13 +15,13 @@ position:relative;
 position:absolute;
 width:100px;
 left:70px;
-top:50px;
+top:60px;
 }
-#food_botton{
+#food_colorbotton{
 position:absolute;
 width:100px;
 left:180px;
-top:50px;
+top:67px;
 }
 #buy{
 position:absolute;
@@ -64,7 +64,7 @@ top:340px;
 position:absolute;
 width:50px;
 left:650px;
-top:25px;	
+top:35px;	
 }
 </style>
 <?php
@@ -73,7 +73,7 @@ require("conn.php");
 <div>
 <img  id="shoplist" src="picture\shoplist.png" />
 <img  id="seed_botton" src="picture\seed_botton.png" />
-<a href=food.php><img  id="food_botton" src="picture\food_botton.png" /></a>
+<a href=food.php><img  id="food_colorbotton" src="picture\food_colorbotton.png" /></a>
 <div>
 <img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=100px,width=200px;')>
 <a href><img  id="rice" src="picture\rice.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=100px,width=200px;')></a>

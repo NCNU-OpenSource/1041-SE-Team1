@@ -69,8 +69,7 @@ top:115px;
 <?php
 require("conn.php");
 ?>
-<div><img  id="seed_botton" src="picture\seed_botton.png" />
-<img  id="food_botton" src="picture\food_botton.png" />
+<div>
 <img  id="shoplist" src="picture\shoplist.png" />
 
 
