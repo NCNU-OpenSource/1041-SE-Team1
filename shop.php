@@ -77,12 +77,19 @@ width:100px;
 left:590px;
 top:310px;
 }
+#previouspage{
+position:absolute;
+width:40px;
+left:70px;
+top:245px;
+}
 #nextpage{
 position:absolute;
 width:40px;
 left:695px;
-top:243px;
+top:245px;
 }
+
 #close{
 position:absolute;
 width:50px;
@@ -106,6 +113,7 @@ require("conn.php");
 <a href><img  id="corn" src="picture\corn.png" / onclick=window.open('')></a>
 <a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('')></a>
 <a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('')></a>
+<a href><img id="previouspage" src="picture\previouspage.png"/onclick=window.close('')><a>
 <a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close('')><a>
 </div>
 </div>

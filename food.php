@@ -22,6 +22,7 @@ width:100px;
 left:180px;
 top:60px;
 }
+
 #buy{
 position:absolute;
 width:60px;
@@ -101,6 +102,7 @@ require("conn.php");
 <a href><img  id="milk" src="picture\milk.png" /onclick=window.open()></a>
 <a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open()></a>
 </div>
+
 <div>
 
 </div>
