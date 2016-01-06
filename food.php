@@ -69,9 +69,9 @@ require("conn.php");
 <a href=shop.php><img  id="seed_colorbotton" src="picture\seed_colorbotton.png" /></a>
 <img  id="food_botton" src="picture\food_botton.png" />
 <div>
-<img  id="cake" src="picture\cake.jpg" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')>
-<a href><img  id="rice" src="picture\rice.jpg" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="hot" src="picture\hot.jpeg" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=100px,width=300px;')></a>
+<img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')>
+<a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="hot" src="picture\hot.png" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=100px,width=300px;')></a>
 <a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=100px,width=300px;')></a>
 
 </div>
