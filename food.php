@@ -9,7 +9,6 @@
 <style type="text/css">
 #shoplist{
 position:relative;
-
 }
 #seed_colorbotton{
 position:absolute;
@@ -31,27 +30,51 @@ top:325px;
 }
 #cake{
 position:absolute;
-width:100px;
-left:100px;
-top:180px;
+width:110px;
+left:110px;
+top:150px;
 }
 #rice{
 position:absolute;
-width:100px;
-left:300px;
-top:170px;
+width:110px;
+left:260px;
+top:150px;
 }
-#hot{
+#chocolate{
 position:absolute;
-width:90px;
-left:500px;
-top:180px;
+width:120px;
+left:420px;
+top:160px;
+}
+#popcorn{
+position:absolute;
+width:65px;
+left:595px;
+top:145px;
 }
 #hambuger{
 position:absolute;
-width:80px;
-left:100px;
-top:340px;
+width:95px;
+left:120px;
+top:300px;
+}
+#riceball{
+position:absolute;
+width:95px;
+left:270px;
+top:295px;
+}
+#milk{
+position:absolute;
+width:85px;
+left:430px;
+top:280px;
+}
+#chicken{
+position:absolute;
+width:110px;
+left:570px;
+top:290px;
 }
 
 #close{
@@ -71,9 +94,12 @@ require("conn.php");
 <div>
 <img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')>
 <a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="hot" src="picture\hot.png" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=100px,width=300px;')></a>
+<a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open()></a>
+<a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open()></a>
 <a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=100px,width=300px;')></a>
-
+<a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open()></a>
+<a href><img  id="milk" src="picture\milk.png" /onclick=window.open()></a>
+<a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open()></a>
 </div>
 </div>
 
