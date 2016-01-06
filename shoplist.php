@@ -35,7 +35,7 @@ width:100px;
 left:100px;
 top:180px;
 }
-#rice{
+#peanut{
 position:absolute;
 width:100px;
 left:300px;
@@ -75,7 +75,7 @@ require("conn.php");
 
 <div>
 <a href ><img  id="apple" src="picture\apple.png" /onclick=window.open('testshop.php?id=apple','testshop.php',config='height=200,width=300')></a>
-<a href><img  id="rice" src="picture\rice.png" /></a>
+<a href><img  id="peanut" src="picture\peanut.png" /></a>
 <a href><img  id="tomato" src="picture\tomato.png" /></a>
 <a href><img  id="green_pepper" src="picture\green_pepper.png" /></a>
 <a href><img  id="grape" src="picture\grape.png" /></a>

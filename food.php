@@ -37,7 +37,7 @@ top:150px;
 #rice{
 position:absolute;
 width:110px;
-left:260px;
+left:265px;
 top:150px;
 }
 #chocolate{
@@ -100,6 +100,9 @@ require("conn.php");
 <a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open()></a>
 <a href><img  id="milk" src="picture\milk.png" /onclick=window.open()></a>
 <a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open()></a>
+</div>
+<div>
+
 </div>
 </div>
 

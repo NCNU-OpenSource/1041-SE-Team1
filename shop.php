@@ -32,32 +32,50 @@ top:325px;
 #apple{
 position:absolute;
 width:100px;
-left:100px;
-top:180px;
+left:120px;
+top:160px;
 }
-#rice{
+#peanut{
 position:absolute;
-width:100px;
-left:300px;
-top:170px;
+width:110px;
+left:260px;
+top:155px;
 }
 #tomato{
 position:absolute;
-width:90px;
-left:500px;
-top:180px;
+width:110px;
+left:430px;
+top:160px;
 }
 #green_pepper{
 position:absolute;
-width:80px;
-left:100px;
-top:340px;
+width:75px;
+left:595px;
+top:150px;
 }
 #grape{
 position:absolute;
-width:65px;
-left:300px;
-top:340px;
+width:95px;
+left:130px;
+top:300px;
+}
+#corn{
+position:absolute;
+width:105px;
+left:280px;
+top:300px;
+}
+#mushroom{
+position:absolute;
+width:100px;
+left:440px;
+top:300px;
+}
+#carrot{
+position:absolute;
+width:100px;
+left:590px;
+top:310px;
 }
 
 #close{
@@ -76,10 +94,13 @@ require("conn.php");
 <a href=food.php><img  id="food_colorbotton" src="picture\food_colorbotton.png" /></a>
 <div>
 <img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=100px,width=200px;')>
-<a href><img  id="rice" src="picture\rice.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('itemlist.php?id=4','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('itemlist.php?id=5','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="grape" src="picture\grape.png" / onclick=window.open('itemlist.php?id=6','itemlist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('')></a>
+<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('')></a>
+<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('')></a>
 </div>
 </div>
 

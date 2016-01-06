@@ -23,7 +23,7 @@ width:100px;
 left:100px;
 top:180px;
 }
-#rice{
+#peanut{
 position:absolute;
 width:100px;
 left:300px;
