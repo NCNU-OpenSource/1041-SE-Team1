@@ -23,34 +23,57 @@ top:325px;
 #apple{
 position:absolute;
 width:100px;
-left:100px;
-top:180px;
+left:120px;
+top:160px;
 }
-#rice{
+#peanut{
 position:absolute;
-width:100px;
-left:300px;
-top:170px;
+width:110px;
+left:260px;
+top:155px;
 }
 #tomato{
 position:absolute;
-width:90px;
-left:500px;
-top:180px;
+width:110px;
+left:430px;
+top:160px;
 }
 #green_pepper{
 position:absolute;
-width:80px;
-left:100px;
-top:340px;
+width:75px;
+left:595px;
+top:150px;
 }
 #grape{
 position:absolute;
-width:65px;
-left:300px;
-top:340px;
+width:95px;
+left:130px;
+top:300px;
 }
-
+#corn{
+position:absolute;
+width:105px;
+left:280px;
+top:300px;
+}
+#mushroom{
+position:absolute;
+width:100px;
+left:440px;
+top:300px;
+}
+#carrot{
+position:absolute;
+width:100px;
+left:590px;
+top:310px;
+}
+#nextpage{
+position:absolute;
+width:40px;
+left:695px;
+top:243px;
+}
 #close{
 position:absolute;
 width:50px;
@@ -66,11 +89,16 @@ require("conn.php");
 <img  id="storehouselist" src="picture\storehouselist.png" />
 
 <div>
-<img  id="apple" src="picture\apple.png" / onclick=window.open('storehouselist.php?id=3','storehouselist.php',config='height=100px,width=200px;')>
-<a href><img  id="rice" src="picture\rice.png" / onclick=window.open('storehouselist.php?id=2','storehouselist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('storehouselist.php?id=3','storehouselist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('storehouselist.php?id=2','storehouselist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('storehouselist.php?id=4','storehouselist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('storehouselist.php?id=5','storehouselist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="grape" src="picture\grape.png" / onclick=window.open('storehouselist.php?id=6','storehouselist.php',config='height=100px,width=200px;')></a>
+<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('')></a>
+<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('')></a>
+<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('')></a>
+<a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close()><a>
+
 </div>
 </div>
 <a href="farm.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>

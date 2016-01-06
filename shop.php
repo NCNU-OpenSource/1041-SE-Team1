@@ -77,7 +77,12 @@ width:100px;
 left:590px;
 top:310px;
 }
-
+#nextpage{
+position:absolute;
+width:40px;
+left:695px;
+top:243px;
+}
 #close{
 position:absolute;
 width:50px;
@@ -93,7 +98,7 @@ require("conn.php");
 <img  id="seed_botton" src="picture\seed_botton.png" />
 <a href=food.php><img  id="food_colorbotton" src="picture\food_colorbotton.png" /></a>
 <div>
-<img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=100px,width=200px;')>
+<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('itemlist.php?id=4','itemlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('itemlist.php?id=5','itemlist.php',config='height=100px,width=200px;')></a>
@@ -101,6 +106,7 @@ require("conn.php");
 <a href><img  id="corn" src="picture\corn.png" / onclick=window.open('')></a>
 <a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('')></a>
 <a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('')></a>
+<a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close('')><a>
 </div>
 </div>
 
