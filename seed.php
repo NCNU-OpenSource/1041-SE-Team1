@@ -11,7 +11,7 @@
 <hr />
 <table width="200" border="1">
   <tr>
-     <td>  作物</td>
+     <td>作物</td>
     <td>時間</td>
     <td>售價</td>
     <td>獲利</td>

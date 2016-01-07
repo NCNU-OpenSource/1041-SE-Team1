@@ -162,7 +162,7 @@ Totalexp:<?php echo $totalexp ;?>
            echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')></a>" ;
         }
         else{
-            echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=100,width=400')></a>" ;
+            echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=300,width=700')></a>" ;
         }
         
         
@@ -184,14 +184,14 @@ Totalexp:<?php echo $totalexp ;?>
 
 
 <div id="shop">
-<a href><img  src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('door.php','door.php',"height=480,width=770")></a>
+<a href><img  src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('door.php','door.php',config="height=480,width=800")></a>
 </div>
 
 <div id="farmer">
 <img  src="picture\farmer.png" />
 </div>
 <div id="storehouse">
-<a href><img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=480,width=770,location=0,status=0')></a>
+<a href><img src="picture\storehouse.png" alt="倉庫" title="倉庫"/ onclick=window.open('storehouse.php','storehouse.php',config='height=490,width=780,location=0,status=0')></a>
 <br/>
 
 </div>

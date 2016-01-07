@@ -80,7 +80,7 @@ top:310px;
 #previouspage{
 position:absolute;
 width:40px;
-left:70px;
+left:50px;
 top:245px;
 }
 #nextpage{
