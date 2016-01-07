@@ -56,7 +56,7 @@ else{
 </div>
 <?php
     
-header("refresh: 0.1;url=showsecond.php?id=$id" ); 
+header("refresh:0.1;url=showsecond.php?id=$id" ); 
 ?>
 </div>
 <a href="farm.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>

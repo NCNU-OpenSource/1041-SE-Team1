@@ -34,6 +34,7 @@ while ($rs=mysqli_fetch_array($results)) {
 
 ?>
 <table>
+
   <tr><form method="post" action="grow.php">
     <td><label>
       <input type="hidden" name="id" value="<?php echo $id; ?>" >

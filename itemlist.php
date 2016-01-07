@@ -37,9 +37,7 @@ $results=mysqli_query($conn,$sql);
 while ($rs=mysqli_fetch_array($results)) {
 
 ?>
-<div>
-<img  id="buylist" src="picture\buylist.png" />
-</div>
+
 <table>
   <td><label>
   <tr><form method="post" action="buy.php">
@@ -68,7 +66,7 @@ while ($rs=mysqli_fetch_array($results)) {
  </tr>
 
 </form>
-<a href="shop.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>
+
 <?php
 } 
 ?>
