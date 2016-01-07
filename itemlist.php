@@ -7,47 +7,6 @@
 
 <body>
 <style type="text/css">
-#shoplist{
-position:relative;
-
-}
-#buy{
-position:absolute;
-width:60px;
-left:420px;
-top:325px;
-}
-#apple{
-position:absolute;
-width:100px;
-left:100px;
-top:180px;
-}
-#peanut{
-position:absolute;
-width:100px;
-left:300px;
-top:170px;
-}
-#tomato{
-position:absolute;
-width:90px;
-left:500px;
-top:180px;
-}
-#green_pepper{
-position:absolute;
-width:80px;
-left:100px;
-top:340px;
-}
-#grape{
-position:absolute;
-width:65px;
-left:300px;
-top:340px;
-}
-
 
 </style>
 <?php

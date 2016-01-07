@@ -55,7 +55,7 @@ top:145px;
 }
 #hambuger{
 position:absolute;
-width:95px;
+width:90px;
 left:120px;
 top:300px;
 }
@@ -67,9 +67,9 @@ top:295px;
 }
 #milk{
 position:absolute;
-width:85px;
+width:83px;
 left:430px;
-top:280px;
+top:283px;
 }
 #chicken{
 position:absolute;
@@ -96,6 +96,52 @@ width:50px;
 left:650px;
 top:35px;	
 }
+#word{
+font-size:25px;
+font-weight: bold;	
+font-family:arial;
+}
+#cake_word{
+position:absolute;
+left:140px;
+top:250px;	
+}
+#rice_word{
+position:absolute;
+left:285px;
+top:248px;	
+}
+#chocolate_word{
+position:absolute;
+left:435px;
+top:246px;	
+}
+#popcorn_word{
+position:absolute;
+left:590px;
+top:246px;	
+}
+#hambuger_word{
+position:absolute;
+left:135px;
+top:390px;	
+}
+#riceball_word{
+position:absolute;
+left:290px;
+top:390px;	
+}
+#milk_word{
+position:absolute;
+left:450px;
+top:390px;	
+}
+#chicken_word{
+position:absolute;
+left:610px;
+top:390px;	
+}
+
 </style>
 <?php
 require("conn.php");
@@ -105,18 +151,43 @@ require("conn.php");
 <a href=shop.php><img  id="seed_colorbotton" src="picture\seed_colorbotton.png" /></a>
 <img  id="food_botton" src="picture\food_botton.png" />
 <div>
-<a href><img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
-<a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open()></a>
-<a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open()></a>
-<a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=100px,width=300px;')></a>
-<a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open()></a>
-<a href><img  id="milk" src="picture\milk.png" /onclick=window.open()></a>
-<a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open()></a>
+<a href><img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=5','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open('foodlist.php?id=6','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="milk" src="picture\milk.png" /onclick=window.open('foodlist.php?id=7','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open('foodlist.php?id=8','foodlist.php',config='height=150px,width=500px;')></a>
 <a href><img id="previouspage" src="picture\previouspage.png"/onclick=window.close('')><a>
 <a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close('')><a>
 </div>
-
+<div id="word">
+<div id="cake_word">
+蛋糕
+</div>
+<div id="rice_word">
+滷肉飯
+</div>
+<div id="chocolate_word">
+巧克力
+</div>
+<div id="popcorn_word">
+爆米花
+</div>
+<div id="hambuger_word">
+漢堡
+</div>
+<div id="riceball_word">
+飯糰
+</div>
+<div id="milk_word">
+牛奶
+</div>
+<div id="chicken_word">
+烤雞
+</div>
+</div>
 <div>
 
 </div>

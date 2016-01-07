@@ -19,10 +19,6 @@ $nickname=$_SESSION['nk'];
 $id=(int)$_POST["id"];
 
 
-
-
-
-
 if ($id>0){
    
 if($count==0){
