@@ -12,9 +12,7 @@
 <table width="200" border="1">
   <tr>
      <td>作物</td>
-    <td>時間</td>
-    <td>售價</td>
-    <td>獲利</td>
+     <td>時間</td>
      <td>數量</td>
     
   </tr>
@@ -43,16 +41,12 @@ while ($rs=mysqli_fetch_array($results)) {
     </label></td>
     <td><label>
       <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?><?php echo $rs['time']; ?>小時
-    <?php echo $rs['money'];?>
-   
-   
-     <?php echo $rs['sold']; ?>
-   
+
     
       <?php echo $rs['count']; ?>
    </label></td> 
    <td><label>
-    <input type="submit" name="Submit" value="種植!" />
+    <input type="submit" name="Submit" value="種植" />
     </label></td>
      
     
