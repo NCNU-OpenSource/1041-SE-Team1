@@ -162,7 +162,7 @@ Totalexp:<?php echo $totalexp ;?>
            echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')></a>" ;
         }
         else{
-            echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=300,width=700')></a>" ;
+            echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=455,width=520')></a>" ;
         }
         
         

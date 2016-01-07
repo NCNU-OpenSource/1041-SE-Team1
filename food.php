@@ -105,7 +105,7 @@ require("conn.php");
 <a href=shop.php><img  id="seed_colorbotton" src="picture\seed_colorbotton.png" /></a>
 <img  id="food_botton" src="picture\food_botton.png" />
 <div>
-<img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')>
+<a href><img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=100px,width=200px;')></a>
 <a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open()></a>
 <a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open()></a>

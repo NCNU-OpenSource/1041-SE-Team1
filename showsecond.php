@@ -1,3 +1,4 @@
+
 <?php
 require("conn.php");
 ?>
@@ -5,14 +6,21 @@ require("conn.php");
 #content{
 position:relative;
 background-image: url(sign.jpg);
-width:325px;
-height:295px;
+width:500px;
+height:425px;
 }
 #show{
 position:absolute;
-left:90px;
-top:115px;
-
+left:110px;
+top:180px;
+font-size:25px;
+font-weight: bold;
+}
+#close{
+position:absolute;
+width:30px;
+left:380px;
+top:168px;	
 }
 </style>
 <div id=content >
@@ -25,7 +33,6 @@ $rs4=mysqli_fetch_array($results4);
 $ftime=$rs4['ftime'];//作物完成時間秒數
 $time=$ftime-$hour1;//作物完成時間減去使用者查看時間秒數(作物剩餘時間)
 $status=$rs4['status'];
-
 if($time<=0){
     $h=0;//已完成
     $m=0;
@@ -41,7 +48,6 @@ else{
 ?>
 <div id=show>
 <?php
-
     echo" $status 還剩下:" ;
     echo"</br>";
     echo" $h 小時 $m 分鐘 $s 秒可採收";
@@ -59,4 +65,4 @@ else{
 header("refresh: 1;url=showsecond.php?id=$id" ); 
 ?>
 </div>
-<input onclick="window.close();" value="關閉視窗" type="button">
+<a href="farm.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>
