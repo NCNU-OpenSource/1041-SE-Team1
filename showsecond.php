@@ -55,13 +55,7 @@ else{
 ?>
 </div>
 <?php
-    if($h==0 and $m==0 and $s==0){
-        ?>
-        <script type="text/javascript">
-            self.opener.location.reload(); //重新整理farm.php頁面
-        </script>
-        <?php
-    }
+    
 header("refresh: 0.1;url=showsecond.php?id=$id" ); 
 ?>
 </div>
