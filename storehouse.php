@@ -68,10 +68,55 @@ width:100px;
 left:590px;
 top:310px;
 }
+#word{
+font-size:25px;
+font-weight: bold;	
+font-family:arial;
+}
+#apple_word{
+position:absolute;
+left:140px;
+top:250px;	
+}
+#peanut_word{
+position:absolute;
+left:295px;
+top:248px;	
+}
+#corn_word{
+position:absolute;
+left:455px;
+top:252px;	
+}
+#tomato_word{
+position:absolute;
+left:610px;
+top:253px;	
+}
+#green_pepper_word{
+position:absolute;
+left:135px;
+top:390px;	
+}
+#grape_word{
+position:absolute;
+left:300px;
+top:390px;	
+}
+#mushroom_word{
+position:absolute;
+left:460px;
+top:390px;	
+}
+#carrot_word{
+position:absolute;
+left:610px;
+top:390px;	
+}
 #previouspage{
 position:absolute;
 width:40px;
-left:70px;
+left:50px;
 top:245px;
 }
 #nextpage{
@@ -103,9 +148,34 @@ require("conn.php");
 <a href><img  id="corn" src="picture\corn.png" / onclick=window.open('storehouselist.php?id=6','storehouselist.php',config='height=150px,width=500px;')></a>
 <a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('storehouselist.php?id=7','storehouselist.php',config='height=150px,width=500px;')></a>
 <a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('storehouselist.php?id=8','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img id="previouspage" src="picture\previouspage.png"/onclick=window.close('')><a>
-<a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close('')><a>
-
+<a href><img id="previouspage" src="picture\previouspage.png"><a>
+<a href><img id="nextpage" src="picture\nextpage.png"><a>
+</div>
+<div id="word">
+<div id="apple_word">
+蘋果
+</div>
+<div id="peanut_word">
+花生
+</div>
+<div id="corn_word">
+玉米
+</div>
+<div id="tomato_word">
+番茄
+</div>
+<div id="green_pepper_word">
+青椒
+</div>
+<div id="grape_word">
+葡萄
+</div>
+<div id="mushroom_word">
+香菇
+</div>
+<div id="carrot_word">
+紅蘿蔔
+</div>
 </div>
 </div>
 <a href="farm.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>

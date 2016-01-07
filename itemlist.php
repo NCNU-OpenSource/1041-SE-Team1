@@ -7,6 +7,22 @@
 
 <body>
 <style type="text/css">
+#buylist{
+position:relative;
+width:400px;
+}
+#buy{
+position:absolute;
+width:150px;
+left:130px;
+top:300px;	
+}
+#close{
+position:absolute;
+width:50px;
+left:330px;
+top:25px;	
+}
 
 </style>
 <?php
@@ -21,7 +37,9 @@ $results=mysqli_query($conn,$sql);
 while ($rs=mysqli_fetch_array($results)) {
 
 ?>
-
+<div>
+<img  id="buylist" src="picture\buylist.png" />
+</div>
 <table>
   <td><label>
   <tr><form method="post" action="buy.php">
@@ -42,13 +60,15 @@ while ($rs=mysqli_fetch_array($results)) {
     <td><label>
     <input type="textbox" size=1 name="count"  />
     </label></td>
-   <td><label>
-    <input type="submit" name="Submit" value="購買!" />
+   <td><label>.
+    <!--<a href="buy.php"><img id="buy" src="picture\buy.png"></a>-->
+   <input type="submit" name="Submit" value="購買!" />
     </label></td>
 
  </tr>
 
 </form>
+<a href="shop.php"><img id="close" src="picture\close.png"/onclick=window.close()><a>
 <?php
 } 
 ?>

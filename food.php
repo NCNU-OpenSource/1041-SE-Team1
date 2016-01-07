@@ -159,8 +159,8 @@ require("conn.php");
 <a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open('foodlist.php?id=6','foodlist.php',config='height=150px,width=500px;')></a>
 <a href><img  id="milk" src="picture\milk.png" /onclick=window.open('foodlist.php?id=7','foodlist.php',config='height=150px,width=500px;')></a>
 <a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open('foodlist.php?id=8','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img id="previouspage" src="picture\previouspage.png"/onclick=window.close('')><a>
-<a href><img id="nextpage" src="picture\nextpage.png"/onclick=window.close('')><a>
+<a href><img id="previouspage" src="picture\previouspage.png"><a>
+<a href><img id="nextpage" src="picture\nextpage.png"><a>
 </div>
 <div id="word">
 <div id="cake_word">
