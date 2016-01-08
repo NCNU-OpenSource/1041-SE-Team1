@@ -65,7 +65,7 @@ $sql2 = "select * from seed where  name='$seed';";
                 self.opener.location.reload(); //重新整理farm.php頁面
             </script>
             <?php
-            echo"<a href=shop.php>回商店</a>";
+           
             }
             else{
                 echo"您的錢不夠!!";
@@ -103,11 +103,11 @@ $sql2 = "select * from seed where  name='$seed';";
                 self.opener.location.reload(); //重新整理farm.php頁面
             </script>
             <?php
-            echo"<a href=shop.php>回商店</a>";
+           
             }
             else{
                 echo"您的錢不夠!!";
-                echo"<a href=shop.php>回商店</a>";
+               
     
             }
         }

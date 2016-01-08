@@ -42,6 +42,10 @@ else
 
 ?>
 <style type="text/css">
+	
+	
+	
+}
 * { box-sizing: border-box }
 
 @font-face{
@@ -147,19 +151,25 @@ input {
 }
 </style>
 </head>
-<body>
-<a  action="playerlogin.php">
+<div id=content style=color:pink>
+<body bgcolor="#cccccc">
+
+<form method="post" action="logincss.php">
+
 <div class="form">
   <div class="username">
-    <input type="text" placeholder="USERNAME" value="dcw"/>
+   <input type="text" name="id" value=dcw>
   </div>
   <div class="password">
-    <input type="text" placeholder="PASSWORD" value="12345"/>
+    <input type="password" name="pwd" value=12345>
   </div>
   <div class="login">
-    <span>log in</span>
+    <input type="submit" value="登入">
+	
   </div>
 </div>
 </a>
+</form>
 </body>
+</div>
 </html>

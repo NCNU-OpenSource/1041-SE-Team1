@@ -184,6 +184,7 @@ Totalexp:<?php echo $totalexp ;?>
 
 
 <div id="shop">
+
 <a href><img  src="picture\shop.png" alt="商店" title="商店"/ onclick=window.open('door.php','door.php',config="height=480,width=800")></a>
 </div>
 

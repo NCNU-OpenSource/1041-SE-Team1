@@ -43,13 +43,7 @@ What do you want to grow?
 <img  src="picture/growingfarmer.png" />
 </div>
 <div id="detail">
-<table width="200" border="1">
-  <tr>
-     <td>作物</td>
-     <td>時間</td>
-     <td>數量</td>
-    
-  </tr>
+
 <?php
 require("conn.php");
 ?>
@@ -63,7 +57,7 @@ $results=mysqli_query($conn,$sql);
 while ($rs=mysqli_fetch_array($results)) {
 
 ?>
-<table border="1">
+<table>
 
   <tr><form method="post" action="grow.php">
     <td><label>
@@ -71,10 +65,11 @@ while ($rs=mysqli_fetch_array($results)) {
      
     </label></td>
     <td><label>
-      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?><?php echo $rs['time']; ?>小時
+      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?>x<?php echo $rs['count']; ?>
+	  <?php if($rs['time']<10){echo"  ";}echo $rs['time'];if($rs['time']<10){echo" ";} ?>秒<?phpif($rs['time']<10){echo" ";} ?>
 
     
-      <?php echo $rs['count']; ?>
+      
    </label></td> 
    <td><label>
     <input type="submit" name="Submit" value="種植" />

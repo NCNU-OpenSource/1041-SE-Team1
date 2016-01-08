@@ -42,7 +42,7 @@ else{
         $rs2=mysqli_fetch_array($result2);
         $time=$rs2['time'];
         $name=$rs2['name'];
-        $second=time()+($time*3600);
+        $second=time()+($time);
         $exp=$rs2['exp'];
 
 

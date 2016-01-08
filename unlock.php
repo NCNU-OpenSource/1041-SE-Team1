@@ -37,8 +37,11 @@ if ($LV>=$level && $playermoney>=$cost) {
     echo"成功解鎖土地!!";
     echo"</br>";
     echo"扣除金錢 $cost 元";
-    
-   
+	?>
+    <script type="text/javascript">
+        self.opener.location.reload(); //重新整理farm.php頁面
+    </script>
+    <?php
     
 	
     

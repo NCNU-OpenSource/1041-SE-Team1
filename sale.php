@@ -45,9 +45,7 @@ $sql2 = "select * from flower where  name='$seed';";
             $name=$rs2['name'];
             $sold=$rs2['sold'];
             $earn=$sold*$count;//這是出售作物收入的錢
-            
-               
-	            
+
             $sql3="update flower set count=count-$count where name='$name';";
             mysqli_query($conn,$sql3) or die("error3");
             $sql4="update player set money=money+$earn where nickname='$nickname';";
@@ -60,26 +58,11 @@ $sql2 = "select * from flower where  name='$seed';";
                 self.opener.location.reload(); //重新整理farm.php頁面                             
             </script>
             <?php
-            echo"<a href=storehouse.php>回倉庫</a>";
-            
            
-        }
-    
-       
-   }
-    
-    
-	
-    
-    
-    
-	
-    
-    
-    
-    
- 
 
+           
+        }       
+   }
 ?>
 </body>
 </html>
