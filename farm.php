@@ -152,7 +152,7 @@ Totalexp:<?php echo $totalexp ;?>
         
     }
     else if($status=="空地"){
-        echo "<a href><img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=500,width=400')></a>";
+        echo "<a href><img src='picture\land.png' / onclick=window.open('seed.php?id=$count','seed.php',config='height=560,width=470')></a>";
        
     }
     else {

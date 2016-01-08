@@ -3,12 +3,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>種植作物</title>
+<style type="text/css">
+#content{
+position:relative;
+background-image: url(growlist.png);
+width:450px;
+height:525px;
+}
+#title{
+position:relative;
+left:70px;
+top:30px;
+font-size:28px;
+font-weight: bold;
+
+}
+#detail{
+position:relative;
+left:120px;
+top:80px;
+font-size:20px;
+text-align:center;
+
+}
+#growingfarmer{
+position:absolute;
+left:10px;
+top:330px;	
+}
 </head>
 
+</style>
 <body>
-
-<p>Do you want to grow !! </p>
-<hr />
+<div id="content" >
+<div id="title">
+What do you want to grow?
+</div>
+<div id="growingfarmer">
+<img  src="picture/growingfarmer.png" />
+</div>
+<div id="detail">
 <table width="200" border="1">
   <tr>
      <td>作物</td>
@@ -22,18 +56,14 @@ require("conn.php");
 
 
 <?php
-
-    
-
 $id=(int)$_GET['id'];
-
 $sql = "select * from seed where count>0;";
 $results=mysqli_query($conn,$sql);
 
 while ($rs=mysqli_fetch_array($results)) {
 
 ?>
-<table>
+<table border="1">
 
   <tr><form method="post" action="grow.php">
     <td><label>
@@ -60,5 +90,7 @@ while ($rs=mysqli_fetch_array($results)) {
 } 
 ?>
 </form>
+</div>
+</div>
 </body>
 </html>
