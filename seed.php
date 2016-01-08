@@ -31,9 +31,10 @@ position:absolute;
 left:10px;
 top:330px;	
 }
+</style>
 </head>
 
-</style>
+
 <body>
 <div id="content" >
 <div id="title">
@@ -65,8 +66,10 @@ while ($rs=mysqli_fetch_array($results)) {
      
     </label></td>
     <td><label>
-      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?>x<?php echo $rs['count']; ?>
-	  <?php if($rs['time']<10){echo"  ";}echo $rs['time'];if($rs['time']<10){echo" ";} ?>秒<?phpif($rs['time']<10){echo" ";} ?>
+      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>>
+	  <?php echo $rs['name']; ?>
+	  x<?php echo $rs['count']; ?>
+	  <?php if($rs['time']<10){echo"  ";}echo $rs['time'];if($rs['time']<10) {echo" ";} ?>秒<?phpif($rs['time']<10){echo" ";} ?>
 
     
       

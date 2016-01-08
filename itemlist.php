@@ -2,15 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>商店</title>
-</head>
-
-<body>
 <style type="text/css">
-#buylist{
+#content{
 position:relative;
-width:400px;
+background-image: url(itemlist.png);
+width:297px;
+height:117px;
 }
+#detail{
+position:relative;
+left:15px;
+top:40px;
+font-size:10px;
+text-align:center;
+
+}
+
 #buy{
 position:absolute;
 width:150px;
@@ -25,10 +32,15 @@ top:25px;
 }
 
 </style>
+<title>商店</title>
+</head>
+
+<body>
+<div id="content" >
 <?php
 require("conn.php");
 ?>
-
+<div id="detail">
 <?php
 $id=(int)$_GET['id'];
 $sql = "select * from shop where id=$id;";
@@ -46,28 +58,27 @@ while ($rs=mysqli_fetch_array($results)) {
      
     </label></td>
     <td><label>
-      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?><?php echo $rs['time']; ?>小時
-    費用<?php echo $rs['money'];?>
+      <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?><?php echo $rs['time']; ?>小時花費<?php echo $rs['money'];?> 售價<?php echo $rs['sold']; ?>
    
-   
-     收益<?php echo $rs['sold']; ?>
    
     
+
       
    </label></td> 
     <td><label>
     <input type="textbox" size=1 name="count"  />
     </label></td>
-   <td><label>.
+   <td><label>
     <!--<a href="buy.php"><img id="buy" src="picture\buy.png"></a>-->
-   <input type="submit" name="Submit" value="購買!" />
+ <input type="submit" name="Submit" value="買" />
     </label></td>
 
  </tr>
 
 </form>
-
+</div>
 <?php
 } 
 ?>
-
+</div>
+</body>

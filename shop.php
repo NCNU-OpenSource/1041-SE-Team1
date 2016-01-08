@@ -150,14 +150,14 @@ require("conn.php");
 <img  id="seed_botton" src="picture\seed_botton.png" />
 <a href=food.php><img  id="food_colorbotton" src="picture\food_colorbotton.png" /></a>
 <div>
-<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('itemlist.php?id=3','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('itemlist.php?id=4','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('itemlist.php?id=5','itemlist.php',config='height=410px,width=440px')></a>
-<a href><img  id="grape" src="picture\grape.png" / onclick=window.open('itemlist.php?id=6','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('itemlist.php?id=7','itemlist.php',config='height=410px,width=440px;')></a>
-<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('itemlist.php?id=8','itemlist.php',config='height=410px,width=440px;')></a>
+<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('itemlist.php?id=1','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('itemlist.php?id=2','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('itemlist.php?id=3','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('itemlist.php?id=4','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('itemlist.php?id=5','itemlist.php',config='height=150px,width=350px')></a>
+<a href><img  id="grape" src="picture\grape.png" / onclick=window.open('itemlist.php?id=6','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('itemlist.php?id=7','itemlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('itemlist.php?id=8','itemlist.php',config='height=150px,width=350px;')></a>
 <a href><img id="previouspage" src="picture\previouspage.png"><a>
 <a href><img id="nextpage" src="picture\nextpage.png"><a>
 </div>

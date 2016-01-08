@@ -140,14 +140,14 @@ require("conn.php");
 <img  id="storehouselist" src="picture\storehouselist.png" />
 
 <div>
-<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('storehouselist.php?id=1','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('storehouselist.php?id=2','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('storehouselist.php?id=3','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('storehouselist.php?id=4','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('storehouselist.php?id=5','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="grape" src="picture\grape.png" / onclick=window.open('storehouselist.php?id=6','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('storehouselist.php?id=7','storehouselist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('storehouselist.php?id=8','storehouselist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="apple" src="picture\apple.png" / onclick=window.open('storehouselist.php?id=1','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="peanut" src="picture\peanut.png" / onclick=window.open('storehouselist.php?id=2','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="corn" src="picture\corn.png" / onclick=window.open('storehouselist.php?id=3','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="tomato" src="picture\tomato.png" / onclick=window.open('storehouselist.php?id=4','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="green_pepper" src="picture\green_pepper.png" / onclick=window.open('storehouselist.php?id=5','storehouselist.php',config='height=350px,width=500px;')></a>
+<a href><img  id="grape" src="picture\grape.png" / onclick=window.open('storehouselist.php?id=6','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="mushroom" src="picture\mushroom.png" / onclick=window.open('storehouselist.php?id=7','storehouselist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="carrot" src="picture\carrot.png" / onclick=window.open('storehouselist.php?id=8','storehouselist.php',config='height=150px,width=350px;')></a>
 <a href><img id="previouspage" src="picture\previouspage.png"><a>
 <a href><img id="nextpage" src="picture\nextpage.png"><a>
 </div>

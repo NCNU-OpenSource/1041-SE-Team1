@@ -10,6 +10,20 @@
 #shoplist{
 position:relative;
 }
+#content{
+position:relative;
+background-image: url(itemlist.png);
+width:297px;
+height:117px;
+}
+#detail{
+position:relative;
+left:15px;
+top:40px;
+font-size:16px;
+text-align:center;
+
+}
 #seed_colorbotton{
 position:absolute;
 width:100px;
@@ -97,10 +111,11 @@ left:650px;
 top:35px;	
 }
 </style>
+<div id="content">
 <?php
 require("conn.php");
 ?>
-
+<div id="detail">
 <?php
 $id=(int)$_GET['id'];
 $sql = "select * from food where id=$id;";
@@ -119,7 +134,7 @@ while ($rs=mysqli_fetch_array($results)) {
     </label></td>
     <td><label>
       <input  type="radio" name="seed" id="seed" value=<?php echo $rs['name']; ?>><?php echo $rs['name']; ?>
-    費用:<?php echo $rs['price'];?>
+    花費<?php echo $rs['price'];?>元
    
    
      回復體力:<?php echo $rs['power']; ?>
@@ -129,7 +144,7 @@ while ($rs=mysqli_fetch_array($results)) {
    </label></td> 
     
    <td><label>
-    <input type="submit" name="Submit" value="吃!" />
+    <input type="submit" name="Submit" value="吃" />
     </label></td>
 
  </tr>
@@ -138,7 +153,8 @@ while ($rs=mysqli_fetch_array($results)) {
 <?php
 } 
 ?>
-
+</div>
+</div>
 </body>
 <a href="farm.php"><img id="close" src="picture\close.png"><a>
 </html>
