@@ -3,12 +3,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>出售</title>
+<style type="text/css">
+#content{
+position:relative;
+height:325px;
+top:8px;
+}
+#detail{
+position:absolute;
+top:45px;
+left:75px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
 </head>
 
 <body>
+<div id="content">
+<img  src="picture\sure.jpg" />
+</div>
+<div id="detail">
 
-<p>販賣...</p>
-<hr />
 <?php
 require("conn.php");
 ?>
@@ -50,7 +68,7 @@ $sql2 = "select * from flower where  name='$seed';";
             mysqli_query($conn,$sql3) or die("error3");
             $sql4="update player set money=money+$earn where nickname='$nickname';";
             mysqli_query($conn,$sql4) or die("error4");
-	        echo "成功出售!!!!";
+	        echo "成功出售!";
             echo " $name x $count ";
             echo "總共獲得 $earn 元";
             ?>
@@ -65,4 +83,5 @@ $sql2 = "select * from flower where  name='$seed';";
    }
 ?>
 </body>
+</div>
 </html>

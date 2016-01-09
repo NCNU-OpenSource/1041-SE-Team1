@@ -43,7 +43,7 @@ top:300px;
 }
 #player{
 position:absolute;
-width:55px;
+width:60px;
 left:20px;
 top:10px;
 }
@@ -102,7 +102,7 @@ if($exp1>=$exp2){
     $totalexp=$totalexp+$exp1;
 ?>
 <div id="content">
-<img  id="player" src="育銘.jpg" />
+<img  id="player" src="picture\player.png" />
 <div id="intro">
 <?php  echo $_SESSION['nk'] ;?> LV:<?php  echo $LV;?> Money:<?php echo $playermoney ;?></br>
 Energy:<?php echo $power ;?> </br>
@@ -148,7 +148,7 @@ Totalexp:<?php echo $totalexp ;?>
         $s=$time%60;//幾秒
     }
     if($status=="尚未解鎖"){
-        echo" <a href><img src='picture\lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=100,width=200')></a>" ;
+        echo" <a href><img src='picture\lockland.png'/ onclick=window.open('land.php?id=$count','land.php',config='height=150,width=500')></a>" ;
         
     }
     else if($status=="空地"){
@@ -159,7 +159,7 @@ Totalexp:<?php echo $totalexp ;?>
         
         if($status=="可採收"){
            
-           echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=400,width=400')></a>" ;
+           echo" <a href><img src='picture\growland.png' /onclick=window.open('flower.php?id=$count','flower.php',config='height=450,width=350')></a>" ;
         }
         else{
             echo"<a href><img src='picture\seedland.png' / onclick=window.open('showsecond.php?id=$count','showsecond.php',config='height=455,width=520')></a>" ;
@@ -196,6 +196,7 @@ Totalexp:<?php echo $totalexp ;?>
 <br/>
 
 </div>
+
+</div>
 </body>
 </html>
-</div>

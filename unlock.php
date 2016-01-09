@@ -3,12 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>解鎖土地</title>
+<style type="text/css">
+#content{
+position:relative;
+height:325px;
+top:8px;
+}
+#detail{
+position:absolute;
+top:45px;
+left:75px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+</style>
 </head>
 
 <body>
 
-<p>解鎖土地</p>
-<hr />
+<div id="content">
+<img  src="picture\sure.jpg" />
+</div>
+<div id="detail">
 <?php
 require("conn.php");
 ?>
@@ -35,8 +52,7 @@ if ($LV>=$level && $playermoney>=$cost) {
     
 	mysqli_query($conn,$sql4) or die("MySQL query error4"); //執行SQL
     echo"成功解鎖土地!!";
-    echo"</br>";
-    echo"扣除金錢 $cost 元";
+    echo"花費 $cost 元";
 	?>
     <script type="text/javascript">
         self.opener.location.reload(); //重新整理farm.php頁面
@@ -51,7 +67,6 @@ if ($LV>=$level && $playermoney>=$cost) {
   }
   
 ?>
-<input onclick="window.close();" value="關閉視窗" type="button">
 </body>
-
+</div>
 </html>

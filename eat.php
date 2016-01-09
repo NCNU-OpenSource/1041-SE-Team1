@@ -3,6 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>回復體力</title>
+<style type="text/css">
+#content{
+position:relative;
+height:325px;
+top:8px;
+}
+#detail{
+position:absolute;
+top:45px;
+left:75px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
 </head>
 
 <body>

@@ -3,12 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>購買種子</title>
+<style type="text/css">
+#content{
+position:relative;
+height:325px;
+top:8px;
+}
+#detail{
+position:absolute;
+top:45px;
+left:75px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
 </head>
 
 <body>
-
-<p>購買...</p>
-<hr />
+<div id="content">
+<img  src="picture\sure.jpg" />
+</div>
+<div id="detail">
 <?php
 require("conn.php");
 ?>
@@ -95,7 +112,7 @@ $sql2 = "select * from seed where  name='$seed';";
             mysqli_query($conn,$sql8) or die("error8");
             $sql5="update player set money=money-$cost where nickname='$nickname';";
             mysqli_query($conn,$sql5) or die("error5");
-	        echo "成功購買!!!!";
+	        echo "購買成功!!!!";
             echo " $name x $count";
             echo "總共是 $cost 元";           
             ?>
@@ -125,5 +142,6 @@ $sql2 = "select * from seed where  name='$seed';";
  } 
 
 ?>
+</div>
 </body>
 </html>

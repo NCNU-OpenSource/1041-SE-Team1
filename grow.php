@@ -3,12 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>無標題文件</title>
+<style type="text/css">
+#content{
+position:relative;
+height:325px;
+top:8px;
+}
+#detail{
+position:absolute;
+top:45px;
+left:75px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
 </head>
 
 <body>
-
-<p>Grow...</p>
-<hr />
+<div id="content">
+<img  src="picture\sure.jpg" />
+</div>
+<div id="detail">
 <?php
 require("conn.php");
 ?>
@@ -66,5 +83,6 @@ else{
 <script type="text/javascript">
 self.opener.location.reload(); //重新整理farm.php頁面
 </script>
+</div>
 </body>
 </html>

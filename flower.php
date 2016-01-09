@@ -3,12 +3,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>種植作物</title>
+<style type="text/css">
+#content{
+position:relative;
+width:325px;
+height:325px;
+top:80px;
+}
+#detail{
+position:absolute;
+top:6px;
+left:50px;
+font-size:18px;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
 </head>
 
 <body>
+<div id="content">
+<img  src="picture\celebrate.jpg" />
+</div>
+<div id="detail">
+<p>採收成功 !! </p>
 
-<p>採收 !! </p>
-<hr />
 
 <?php
 require("conn.php");
@@ -38,8 +58,9 @@ if ($name==$name2) {//如果已有這項作物
     mysqli_query($conn,$sqlx4) or die("errorx4"); //執行SQL
     $sqlx5="update land set status='空地',seed='',time=0,exp=0,ftime=0 where id='$id';";
     mysqli_query($conn,$sqlx5) or die("errorx5"); //執行SQL
-    echo"$name 收取成功!!";
-    echo"獲得經驗值: $exp !!";
+    echo"$name 收取成功";
+	echo"";
+    echo"獲得經驗值: $exp ";
     }
     else{
     
@@ -49,10 +70,13 @@ if ($name==$name2) {//如果已有這項作物
     mysqli_query($conn,$sql4) or die("error4"); //執行SQL
     $sql5="update land set status='空地',seed='',time=0,exp=0,ftime=0 where id='$id';";
     mysqli_query($conn,$sql5) or die("error5"); //執行SQL
-    echo"$name 收取成功!!";
-    echo"獲得經驗值: $exp !!";
+    echo"$name 收取成功";
+	echo"";
+    echo"獲得經驗值: $exp ";
 }
 ?>
 </form>
+</div>
+</div>
 </body>
 </html>

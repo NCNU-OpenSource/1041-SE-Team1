@@ -151,14 +151,14 @@ require("conn.php");
 <a href=shop.php><img  id="seed_colorbotton" src="picture\seed_colorbotton.png" /></a>
 <img  id="food_botton" src="picture\food_botton.png" />
 <div>
-<a href><img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=5','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open('foodlist.php?id=6','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="milk" src="picture\milk.png" /onclick=window.open('foodlist.php?id=7','foodlist.php',config='height=150px,width=500px;')></a>
-<a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open('foodlist.php?id=8','foodlist.php',config='height=150px,width=500px;')></a>
+<a href><img  id="cake" src="picture\cake.png" /onclick=window.open('foodlist.php?id=1','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="rice" src="picture\rice.png" /onclick=window.open('foodlist.php?id=2','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="chocolate" src="picture\chocolate.png" /onclick=window.open('foodlist.php?id=3','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="popcorn" src="picture\popcorn.png" /onclick=window.open('foodlist.php?id=4','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="hambuger" src="picture\hambuger.png" /onclick=window.open('foodlist.php?id=5','foodlist.php',config='height=150px,width=35px;')></a>
+<a href><img  id="riceball" src="picture\riceball.png" /onclick=window.open('foodlist.php?id=6','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="milk" src="picture\milk.png" /onclick=window.open('foodlist.php?id=7','foodlist.php',config='height=150px,width=350px;')></a>
+<a href><img  id="chicken" src="picture\chicken.png" /onclick=window.open('foodlist.php?id=8','foodlist.php',config='height=150px,width=350px;')></a>
 <a href><img id="previouspage" src="picture\previouspage.png"><a>
 <a href><img id="nextpage" src="picture\nextpage.png"><a>
 </div>

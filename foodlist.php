@@ -13,14 +13,14 @@ position:relative;
 #content{
 position:relative;
 background-image: url(itemlist.png);
-width:297px;
+width:338px;
 height:117px;
 }
 #detail{
 position:relative;
 left:15px;
 top:40px;
-font-size:16px;
+font-size:18px;
 text-align:center;
 
 }
