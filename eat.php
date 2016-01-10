@@ -24,7 +24,10 @@ text-align:center;
 <body>
 
 
-<hr />
+<div id="content">
+<img  src="picture\sure.jpg" />
+</div>
+<div id="detail">
 <?php
 require("conn.php");
 ?>
@@ -37,13 +40,11 @@ $id=(int)$_POST["id"];
 
 if ($id>0){
    
-if($count==0){
-    header("Location:food.php");
-}
 
 $name=mysqli_real_escape_string($conn,    $_POST['seed']   );
 if($name==""){
     header("Location:shop.php");
+	
 }
 
 $sql2 = "select * from food where  name='$name';";
@@ -76,7 +77,7 @@ $result2 = mysqli_query($conn,$sql2);
             
                 $sql4="update player set money=money-$price,power=$power where nickname='$nickname';";
                 mysqli_query($conn,$sql4) or die("error4");
-	            echo "恢復體力 $power !!!!";
+	            echo "恢復體力至 $power ";
             
                 echo "花費 $price 元";
                 ?>
@@ -84,7 +85,6 @@ $result2 = mysqli_query($conn,$sql2);
                     self.opener.location.reload(); //重新整理farm.php頁面
                 </script>
                 <?php
-                 echo"<a href=shop.php>回商店</a>";
              }
              else{
                  echo"您的錢不夠!!";
@@ -111,5 +111,6 @@ $result2 = mysqli_query($conn,$sql2);
   
 }
 ?>
+</div>
 </body>
 </html>

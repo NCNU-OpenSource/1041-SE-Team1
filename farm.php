@@ -16,7 +16,7 @@ background-image: url(farm.jpg);
 width: 770px;
 height: 550px;
 left: 280px;
-top: 50px;
+top: 20px;
 opacity:0.9;
 }
 #intro{
@@ -39,7 +39,7 @@ top:300px;
 #land{
 position:absolute;
 left:245px;
-top:300px;
+top:320px;
 }
 #player{
 position:absolute;

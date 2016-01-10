@@ -70,7 +70,7 @@ while ($rs=mysqli_fetch_array($results)) {
     </label></td>
    <td><label>
     <!--<a href="buy.php"><img id="buy" src="picture\buy.png"></a>-->
- <input type="submit" name="Submit" value="買" />
+   <input type="submit" name="Submit" value="買" />
     </label></td>
 
  </tr>
