@@ -158,10 +158,10 @@ input {
 
 <div class="form">
   <div class="username">
-   <input type="text" name="id" value=dcw>
+   <input type="text" name="id" value=USERNAME>
   </div>
   <div class="password">
-    <input type="password" name="pwd" value=12345>
+    <input type="text" name="pwd" value=PASSWORD>
   </div>
   <div class="login">
     <input type="submit" value="登入">
